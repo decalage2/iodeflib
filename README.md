@@ -4,19 +4,16 @@ iodeflib
 a python library to create, parse and edit cyber incident reports using the
 IODEF XML format (RFC 5070).
 
-Project website: http://www.decalage.info/python/iodeflib
+Project website: <http://www.decalage.info/python/iodeflib>
 
 Usage
 -----
 
-How to parse IODEF data
-~~~~~~~~~~~~~~~~~~~~~~~
+### How to parse IODEF data
 
-How to create IODEF data
-~~~~~~~~~~~~~~~~~~~~~~~~
+### How to create IODEF data
 
-How to edit IODEF data
-~~~~~~~~~~~~~~~~~~~~~~
+### How to edit IODEF data
 
 
 How to contribute
@@ -28,7 +25,7 @@ Bitbucket to propose improvements to the code.
 How to report bugs
 ------------------
 
-You may create an issue ticket on https://bitbucket.org/decalage/iodeflib/issues
+You may create an issue ticket on <https://bitbucket.org/decalage/iodeflib/issues>
 
 Please provide enough information to reproduce the bug: which version you use,
 which operating system and version of Python, etc. Please also provide sample
@@ -37,7 +34,7 @@ code and data files to reproduce the bug.
 License
 -------
 
-Copyright (c) 2011-2012, Philippe Lagadec (http://www.decalage.info)
+Copyright (c) 2011-2012, Philippe Lagadec (<http://www.decalage.info>)
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,

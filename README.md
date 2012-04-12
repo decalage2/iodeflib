@@ -27,6 +27,11 @@ carefully designed in order to keep the python interface as simple as possible,
  hiding some unnecessarily nested structures of the IODEF schema, and adding 
 more convenient shortcuts. Iodeflib is also designed to be extensible.
 
+Download
+--------
+
+Go to <https://bitbucket.org/decalage/iodeflib/downloads>
+
 Usage
 -----
 

@@ -28,6 +28,11 @@ interface as simple as possible, hiding some unnecessarily nested
 structures of the IODEF schema, and adding more convenient shortcuts.
 Iodeflib is also designed to be extensible.
 
+Download
+--------
+
+Go to https://bitbucket.org/decalage/iodeflib/downloads
+
 Usage
 -----
 
@@ -37,6 +42,7 @@ the examples subfolder.
 How to parse IODEF data
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+::
 
         import iodeflib
         # open XML file and parse IODEF:
@@ -56,6 +62,7 @@ How to parse IODEF data
 How to create IODEF data
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+::
 
         import iodeflib
         # create a new IODEF document:
@@ -81,6 +88,7 @@ How to create IODEF data
 How to edit IODEF data
 ~~~~~~~~~~~~~~~~~~~~~~
 
+::
 
         # open XML file and parse IODEF:
         iodef = iodeflib.parse_file('iodef2.xml')

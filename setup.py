@@ -42,7 +42,7 @@ license="BSD"
 packages=[
     "iodeflib", 'iodeflib.examples',
 ]
-download_url="http://www.decalage.info/python/cherryproxy"
+download_url="https://bitbucket.org/decalage/iodeflib/downloads"
 data_files=[
     ('iodeflib', [
         'iodeflib/README.txt',

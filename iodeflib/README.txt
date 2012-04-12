@@ -95,11 +95,17 @@ How to edit IODEF data
         print iodef
         open('iodef2_updated.xml', 'w').write(str(iodef))
 
+More info on the API
+~~~~~~~~~~~~~~~~~~~~
+
+See iodeflib.html in the iodeflib folder, or check the docstrings in the
+source code.
+
 Status
 ------
 
-Not all the features of RFC 5070 are implemented yet. However, the most
-useful classes are already available.
+Not all the features of RFC 5070 are implemented in iodeflib yet.
+However, the most useful classes are already available.
 
 How to contribute
 -----------------

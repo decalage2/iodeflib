@@ -1,0 +1,744 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module iodeflib</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>iodeflib</strong></big></big> (version 0.07)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:./iodeflib.py">.\iodeflib.py</a></font></td></tr></table>
+    <p><tt>IODEFlib<br>
+&nbsp;<br>
+a&nbsp;python&nbsp;library&nbsp;to&nbsp;create,&nbsp;parse&nbsp;and&nbsp;edit&nbsp;cyber&nbsp;incident&nbsp;reports&nbsp;using&nbsp;the<br>
+IODEF&nbsp;XML&nbsp;format&nbsp;(<a href="http://www.rfc-editor.org/rfc/rfc5070.txt">RFC&nbsp;5070</a>).<br>
+&nbsp;<br>
+Project&nbsp;website:&nbsp;<a href="http://www.decalage.info/python/iodeflib">http://www.decalage.info/python/iodeflib</a><br>
+&nbsp;<br>
+Copyright&nbsp;(c)&nbsp;2011-2012,&nbsp;Philippe&nbsp;Lagadec&nbsp;(<a href="http://www.decalage.info">http://www.decalage.info</a>)<br>
+All&nbsp;rights&nbsp;reserved.<br>
+&nbsp;<br>
+Redistribution&nbsp;and&nbsp;use&nbsp;in&nbsp;source&nbsp;and&nbsp;binary&nbsp;forms,&nbsp;with&nbsp;or&nbsp;without&nbsp;modification,<br>
+are&nbsp;permitted&nbsp;provided&nbsp;that&nbsp;the&nbsp;following&nbsp;conditions&nbsp;are&nbsp;met:<br>
+&nbsp;<br>
+&nbsp;*&nbsp;Redistributions&nbsp;of&nbsp;source&nbsp;code&nbsp;must&nbsp;retain&nbsp;the&nbsp;above&nbsp;copyright&nbsp;notice,&nbsp;this<br>
+&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;conditions&nbsp;and&nbsp;the&nbsp;following&nbsp;disclaimer.<br>
+&nbsp;*&nbsp;Redistributions&nbsp;in&nbsp;binary&nbsp;form&nbsp;must&nbsp;reproduce&nbsp;the&nbsp;above&nbsp;copyright&nbsp;notice,<br>
+&nbsp;&nbsp;&nbsp;this&nbsp;list&nbsp;of&nbsp;conditions&nbsp;and&nbsp;the&nbsp;following&nbsp;disclaimer&nbsp;in&nbsp;the&nbsp;documentation<br>
+&nbsp;&nbsp;&nbsp;and/or&nbsp;other&nbsp;materials&nbsp;provided&nbsp;with&nbsp;the&nbsp;distribution.<br>
+&nbsp;<br>
+THIS&nbsp;SOFTWARE&nbsp;IS&nbsp;PROVIDED&nbsp;BY&nbsp;THE&nbsp;COPYRIGHT&nbsp;HOLDERS&nbsp;AND&nbsp;CONTRIBUTORS&nbsp;"AS&nbsp;IS"&nbsp;AND<br>
+ANY&nbsp;EXPRESS&nbsp;OR&nbsp;IMPLIED&nbsp;WARRANTIES,&nbsp;INCLUDING,&nbsp;BUT&nbsp;NOT&nbsp;LIMITED&nbsp;TO,&nbsp;THE&nbsp;IMPLIED<br>
+WARRANTIES&nbsp;OF&nbsp;MERCHANTABILITY&nbsp;AND&nbsp;FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE&nbsp;ARE<br>
+DISCLAIMED.&nbsp;IN&nbsp;NO&nbsp;EVENT&nbsp;SHALL&nbsp;THE&nbsp;COPYRIGHT&nbsp;HOLDER&nbsp;OR&nbsp;CONTRIBUTORS&nbsp;BE&nbsp;LIABLE<br>
+FOR&nbsp;ANY&nbsp;DIRECT,&nbsp;INDIRECT,&nbsp;INCIDENTAL,&nbsp;SPECIAL,&nbsp;EXEMPLARY,&nbsp;OR&nbsp;CONSEQUENTIAL<br>
+DAMAGES&nbsp;(INCLUDING,&nbsp;BUT&nbsp;NOT&nbsp;LIMITED&nbsp;TO,&nbsp;PROCUREMENT&nbsp;OF&nbsp;SUBSTITUTE&nbsp;GOODS&nbsp;OR<br>
+SERVICES;&nbsp;LOSS&nbsp;OF&nbsp;USE,&nbsp;DATA,&nbsp;OR&nbsp;PROFITS;&nbsp;OR&nbsp;BUSINESS&nbsp;INTERRUPTION)&nbsp;HOWEVER<br>
+CAUSED&nbsp;AND&nbsp;ON&nbsp;ANY&nbsp;THEORY&nbsp;OF&nbsp;LIABILITY,&nbsp;WHETHER&nbsp;IN&nbsp;CONTRACT,&nbsp;STRICT&nbsp;LIABILITY,<br>
+OR&nbsp;TORT&nbsp;(INCLUDING&nbsp;NEGLIGENCE&nbsp;OR&nbsp;OTHERWISE)&nbsp;ARISING&nbsp;IN&nbsp;ANY&nbsp;WAY&nbsp;OUT&nbsp;OF&nbsp;THE&nbsp;USE<br>
+OF&nbsp;THIS&nbsp;SOFTWARE,&nbsp;EVEN&nbsp;IF&nbsp;ADVISED&nbsp;OF&nbsp;THE&nbsp;POSSIBILITY&nbsp;OF&nbsp;SUCH&nbsp;DAMAGE.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="lxml.etree.html">lxml.etree</a><br>
+</td><td width="25%" valign=top><a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="iodeflib.html#_XMLMapper">_XMLMapper</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="iodeflib.html#AdditionalData">AdditionalData</a>
+</font></dt><dt><font face="helvetica, arial"><a href="iodeflib.html#Address">Address</a>
+</font></dt><dt><font face="helvetica, arial"><a href="iodeflib.html#Assessment">Assessment</a>
+</font></dt><dt><font face="helvetica, arial"><a href="iodeflib.html#EventData">EventData</a>
+</font></dt><dt><font face="helvetica, arial"><a href="iodeflib.html#Flow">Flow</a>
+</font></dt><dt><font face="helvetica, arial"><a href="iodeflib.html#HistoryItem">HistoryItem</a>
+</font></dt><dt><font face="helvetica, arial"><a href="iodeflib.html#IODEF_Document">IODEF_Document</a>
+</font></dt><dt><font face="helvetica, arial"><a href="iodeflib.html#Impact">Impact</a>
+</font></dt><dt><font face="helvetica, arial"><a href="iodeflib.html#Incident">Incident</a>
+</font></dt><dt><font face="helvetica, arial"><a href="iodeflib.html#System">System</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="AdditionalData">class <strong>AdditionalData</strong></a>(<a href="iodeflib.html#_XMLMapper">_XMLMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>class&nbsp;storing&nbsp;additional&nbsp;custom&nbsp;data<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;data:&nbsp;str<br>
+-&nbsp;dtype:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;ext_dtype:&nbsp;str<br>
+-&nbsp;formatid:&nbsp;str<br>
+-&nbsp;meaning:&nbsp;str<br>
+-&nbsp;restriction:&nbsp;enum&nbsp;of&nbsp;str<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="iodeflib.html#AdditionalData">AdditionalData</a></dd>
+<dd><a href="iodeflib.html#_XMLMapper">_XMLMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="AdditionalData-__init__"><strong>__init__</strong></a>(self, data<font color="#909090">=None</font>, dtype<font color="#909090">=None</font>, ext_dtype<font color="#909090">=None</font>, formatid<font color="#909090">=None</font>, meaning<font color="#909090">=None</font>, restriction<font color="#909090">=None</font>, from_xml<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="AdditionalData-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="AdditionalData-from_xml"><strong>from_xml</strong></a>(self, xml)</dt></dl>
+
+<dl><dt><a name="AdditionalData-to_xml"><strong>to_xml</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="iodeflib.html#_XMLMapper">_XMLMapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Address">class <strong>Address</strong></a>(<a href="iodeflib.html#_XMLMapper">_XMLMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;<a href="#Address">Address</a>&nbsp;class&nbsp;represents&nbsp;a&nbsp;hardware&nbsp;(layer-2),&nbsp;network&nbsp;(layer-3),<br>
+or&nbsp;application&nbsp;(layer-7)&nbsp;address.<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;address:&nbsp;str<br>
+-&nbsp;category:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;ext_category:&nbsp;str<br>
+-&nbsp;vlan_name:&nbsp;str<br>
+-&nbsp;vlan_num:&nbsp;str&nbsp;(int&nbsp;in&nbsp;<a href="http://www.rfc-editor.org/rfc/rfc5070.txt">RFC&nbsp;5070</a>)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="iodeflib.html#Address">Address</a></dd>
+<dd><a href="iodeflib.html#_XMLMapper">_XMLMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Address-__init__"><strong>__init__</strong></a>(self, address<font color="#909090">=None</font>, category<font color="#909090">='ipv4-addr'</font>, ext_category<font color="#909090">=None</font>, vlan_name<font color="#909090">=None</font>, vlan_num<font color="#909090">=None</font>, from_xml<font color="#909090">=None</font>)</dt><dd><tt>constructor&nbsp;for&nbsp;<a href="#Address">Address</a>&nbsp;class<br>
+-&nbsp;see&nbsp;class&nbsp;attributes<br>
+-&nbsp;from_xml:&nbsp;Element&nbsp;object&nbsp;(XML)&nbsp;to&nbsp;be&nbsp;parsed</tt></dd></dl>
+
+<dl><dt><a name="Address-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Address-from_xml"><strong>from_xml</strong></a>(self, xml)</dt></dl>
+
+<dl><dt><a name="Address-to_xml"><strong>to_xml</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="iodeflib.html#_XMLMapper">_XMLMapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Assessment">class <strong>Assessment</strong></a>(<a href="iodeflib.html#_XMLMapper">_XMLMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>class&nbsp;storing&nbsp;the&nbsp;assessment&nbsp;of&nbsp;an&nbsp;incident<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;occurence:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;restriction:&nbsp;enum&nbsp;of&nbsp;str<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="iodeflib.html#Assessment">Assessment</a></dd>
+<dd><a href="iodeflib.html#_XMLMapper">_XMLMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Assessment-__init__"><strong>__init__</strong></a>(self, occurence<font color="#909090">=None</font>, restriction<font color="#909090">=None</font>, impacts<font color="#909090">=None</font>, from_xml<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Assessment-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Assessment-from_xml"><strong>from_xml</strong></a>(self, xml)</dt></dl>
+
+<dl><dt><a name="Assessment-to_xml"><strong>to_xml</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>ImpactClass</strong> = &lt;class 'iodeflib.Impact'&gt;<dd><tt>class&nbsp;storing&nbsp;the&nbsp;impact&nbsp;assessment&nbsp;of&nbsp;an&nbsp;incident<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;description:&nbsp;str<br>
+-&nbsp;lang:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;severity:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;completion:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;type:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;ext_type:&nbsp;str</tt></dl>
+
+<hr>
+Data descriptors inherited from <a href="iodeflib.html#_XMLMapper">_XMLMapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="EventData">class <strong>EventData</strong></a>(<a href="iodeflib.html#_XMLMapper">_XMLMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;<a href="#EventData">EventData</a>&nbsp;class&nbsp;describes&nbsp;a&nbsp;particular&nbsp;event&nbsp;of&nbsp;the&nbsp;incident&nbsp;for<br>
+a&nbsp;given&nbsp;set&nbsp;of&nbsp;hosts&nbsp;or&nbsp;networks.&nbsp;&nbsp;This&nbsp;description&nbsp;includes&nbsp;the<br>
+systems&nbsp;from&nbsp;which&nbsp;the&nbsp;activity&nbsp;originated&nbsp;and&nbsp;those&nbsp;targeted,&nbsp;an<br>
+assessment&nbsp;of&nbsp;the&nbsp;techniques&nbsp;used&nbsp;by&nbsp;the&nbsp;intruder,&nbsp;the&nbsp;impact&nbsp;of&nbsp;the<br>
+activity&nbsp;on&nbsp;the&nbsp;organization,&nbsp;and&nbsp;any&nbsp;forensic&nbsp;evidence&nbsp;discovered.<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;description:&nbsp;list&nbsp;of&nbsp;str<br>
+-&nbsp;start_time:&nbsp;str<br>
+-&nbsp;detect_time:&nbsp;str<br>
+-&nbsp;end_time:&nbsp;str<br>
+-&nbsp;restriction:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;additional_data:&nbsp;list&nbsp;of&nbsp;<a href="#AdditionalData">AdditionalData</a>&nbsp;objects<br>
+-&nbsp;flows:&nbsp;list&nbsp;of&nbsp;<a href="#Flow">Flow</a>&nbsp;objects<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="iodeflib.html#EventData">EventData</a></dd>
+<dd><a href="iodeflib.html#_XMLMapper">_XMLMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="EventData-__init__"><strong>__init__</strong></a>(self, descriptions<font color="#909090">=None</font>, start_time<font color="#909090">=None</font>, detect_time<font color="#909090">=None</font>, end_time<font color="#909090">=None</font>, restriction<font color="#909090">=None</font>, additional_data<font color="#909090">=None</font>, flows<font color="#909090">=None</font>, from_xml<font color="#909090">=None</font>)</dt><dd><tt>constructor&nbsp;for&nbsp;<a href="#EventData">EventData</a>&nbsp;class</tt></dd></dl>
+
+<dl><dt><a name="EventData-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="EventData-from_xml"><strong>from_xml</strong></a>(self, xml)</dt><dd><tt>parse&nbsp;an&nbsp;Element&nbsp;object&nbsp;(XML)&nbsp;to&nbsp;populate&nbsp;this&nbsp;object</tt></dd></dl>
+
+<dl><dt><a name="EventData-get_sources"><strong>get_sources</strong></a>(self)</dt><dd><tt>return&nbsp;list&nbsp;of&nbsp;systems&nbsp;with&nbsp;category='source',&nbsp;in&nbsp;all&nbsp;flows</tt></dd></dl>
+
+<dl><dt><a name="EventData-get_targets"><strong>get_targets</strong></a>(self)</dt><dd><tt>return&nbsp;list&nbsp;of&nbsp;systems&nbsp;with&nbsp;category='target',&nbsp;in&nbsp;all&nbsp;flows</tt></dd></dl>
+
+<dl><dt><a name="EventData-to_xml"><strong>to_xml</strong></a>(self)</dt><dd><tt>convert&nbsp;the&nbsp;object&nbsp;to&nbsp;XML,&nbsp;return&nbsp;an&nbsp;Element&nbsp;object</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>AdditionalDataClass</strong> = &lt;class 'iodeflib.AdditionalData'&gt;<dd><tt>class&nbsp;storing&nbsp;additional&nbsp;custom&nbsp;data<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;data:&nbsp;str<br>
+-&nbsp;dtype:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;ext_dtype:&nbsp;str<br>
+-&nbsp;formatid:&nbsp;str<br>
+-&nbsp;meaning:&nbsp;str<br>
+-&nbsp;restriction:&nbsp;enum&nbsp;of&nbsp;str</tt></dl>
+
+<dl><dt><strong>FlowClass</strong> = &lt;class 'iodeflib.Flow'&gt;<dd><tt>The&nbsp;<a href="#Flow">Flow</a>&nbsp;class&nbsp;groups&nbsp;related&nbsp;the&nbsp;source&nbsp;and&nbsp;target&nbsp;hosts.<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;systems:&nbsp;list&nbsp;of&nbsp;<a href="#System">System</a>&nbsp;objects</tt></dl>
+
+<hr>
+Data descriptors inherited from <a href="iodeflib.html#_XMLMapper">_XMLMapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Flow">class <strong>Flow</strong></a>(<a href="iodeflib.html#_XMLMapper">_XMLMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;<a href="#Flow">Flow</a>&nbsp;class&nbsp;groups&nbsp;related&nbsp;the&nbsp;source&nbsp;and&nbsp;target&nbsp;hosts.<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;systems:&nbsp;list&nbsp;of&nbsp;<a href="#System">System</a>&nbsp;objects<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="iodeflib.html#Flow">Flow</a></dd>
+<dd><a href="iodeflib.html#_XMLMapper">_XMLMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Flow-__init__"><strong>__init__</strong></a>(self, systems<font color="#909090">=None</font>, from_xml<font color="#909090">=None</font>)</dt><dd><tt>constructor&nbsp;for&nbsp;<a href="#Flow">Flow</a>&nbsp;class<br>
+-&nbsp;systems:&nbsp;list&nbsp;of&nbsp;<a href="#System">System</a>&nbsp;objects<br>
+-&nbsp;from_xml:&nbsp;Element&nbsp;object&nbsp;(XML)&nbsp;to&nbsp;be&nbsp;parsed</tt></dd></dl>
+
+<dl><dt><a name="Flow-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Flow-from_xml"><strong>from_xml</strong></a>(self, xml)</dt><dd><tt>parse&nbsp;an&nbsp;Element&nbsp;object&nbsp;(XML)&nbsp;to&nbsp;populate&nbsp;this&nbsp;object</tt></dd></dl>
+
+<dl><dt><a name="Flow-get_sources"><strong>get_sources</strong></a>(self)</dt><dd><tt>return&nbsp;list&nbsp;of&nbsp;systems&nbsp;with&nbsp;category='source'</tt></dd></dl>
+
+<dl><dt><a name="Flow-get_targets"><strong>get_targets</strong></a>(self)</dt><dd><tt>return&nbsp;list&nbsp;of&nbsp;systems&nbsp;with&nbsp;category='target'</tt></dd></dl>
+
+<dl><dt><a name="Flow-to_xml"><strong>to_xml</strong></a>(self)</dt><dd><tt>convert&nbsp;the&nbsp;object&nbsp;to&nbsp;XML,&nbsp;return&nbsp;an&nbsp;Element&nbsp;object</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>SystemClass</strong> = &lt;class 'iodeflib.System'&gt;<dd><tt>The&nbsp;<a href="#System">System</a>&nbsp;class&nbsp;describes&nbsp;a&nbsp;system&nbsp;or&nbsp;network&nbsp;involved&nbsp;in&nbsp;an&nbsp;event.<br>
+The&nbsp;systems&nbsp;or&nbsp;networks&nbsp;represented&nbsp;by&nbsp;this&nbsp;class&nbsp;are&nbsp;categorized<br>
+according&nbsp;to&nbsp;the&nbsp;role&nbsp;they&nbsp;played&nbsp;in&nbsp;the&nbsp;incident&nbsp;through&nbsp;the<br>
+category&nbsp;attribute.&nbsp;&nbsp;The&nbsp;value&nbsp;of&nbsp;this&nbsp;category&nbsp;attribute&nbsp;dictates<br>
+the&nbsp;semantics&nbsp;of&nbsp;the&nbsp;aggregated&nbsp;classes&nbsp;in&nbsp;the&nbsp;<a href="#System">System</a>&nbsp;class.&nbsp;&nbsp;If&nbsp;the<br>
+category&nbsp;attribute&nbsp;has&nbsp;a&nbsp;value&nbsp;of&nbsp;"source",&nbsp;then&nbsp;the&nbsp;aggregated<br>
+classes&nbsp;denote&nbsp;the&nbsp;machine&nbsp;and&nbsp;service&nbsp;from&nbsp;which&nbsp;the&nbsp;activity&nbsp;is<br>
+originating.&nbsp;&nbsp;With&nbsp;a&nbsp;category&nbsp;attribute&nbsp;value&nbsp;of&nbsp;"target"&nbsp;or<br>
+"intermediary",&nbsp;then&nbsp;the&nbsp;machine&nbsp;or&nbsp;service&nbsp;is&nbsp;the&nbsp;one&nbsp;targeted&nbsp;in<br>
+the&nbsp;activity.&nbsp;&nbsp;A&nbsp;value&nbsp;of&nbsp;"sensor"&nbsp;dictates&nbsp;that&nbsp;this&nbsp;<a href="#System">System</a>&nbsp;was&nbsp;part<br>
+of&nbsp;an&nbsp;instrumentation&nbsp;to&nbsp;monitor&nbsp;the&nbsp;network.<br>
+&nbsp;<br>
+This&nbsp;iodeflib.<a href="#System">System</a>&nbsp;class&nbsp;also&nbsp;contains&nbsp;the&nbsp;IODEF&nbsp;Node&nbsp;class,&nbsp;because&nbsp;there<br>
+is&nbsp;a&nbsp;one-to-one&nbsp;mapping:<br>
+The&nbsp;Node&nbsp;class&nbsp;names&nbsp;a&nbsp;system&nbsp;(e.g.,&nbsp;PC,&nbsp;router)&nbsp;or&nbsp;network.<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;category:&nbsp;enum&nbsp;of&nbsp;str,&nbsp;source/target/intermediary/sensor<br>
+-&nbsp;ext_category:&nbsp;str<br>
+-&nbsp;descriptions:&nbsp;list&nbsp;of&nbsp;str<br>
+-&nbsp;interface:&nbsp;str<br>
+-&nbsp;spoofed:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;additional_data:&nbsp;<a href="#AdditionalData">AdditionalData</a><br>
+-&nbsp;restriction:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;node_datetime:&nbsp;str<br>
+-&nbsp;node_location:&nbsp;str<br>
+-&nbsp;node_names:&nbsp;list&nbsp;of&nbsp;str<br>
+-&nbsp;node_addresses:&nbsp;list&nbsp;of&nbsp;<a href="#Address">Address</a>&nbsp;objects<br>
+-&nbsp;node_roles:&nbsp;list&nbsp;of&nbsp;NodeRole&nbsp;objects</tt></dl>
+
+<hr>
+Data descriptors inherited from <a href="iodeflib.html#_XMLMapper">_XMLMapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="HistoryItem">class <strong>HistoryItem</strong></a>(<a href="iodeflib.html#_XMLMapper">_XMLMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;History&nbsp;class&nbsp;is&nbsp;a&nbsp;log&nbsp;of&nbsp;the&nbsp;significant&nbsp;events&nbsp;or&nbsp;actions<br>
+performed&nbsp;by&nbsp;the&nbsp;involved&nbsp;parties&nbsp;during&nbsp;the&nbsp;course&nbsp;of&nbsp;handling&nbsp;the<br>
+incident.<br>
+&nbsp;<br>
+The&nbsp;level&nbsp;of&nbsp;detail&nbsp;maintained&nbsp;in&nbsp;this&nbsp;log&nbsp;is&nbsp;left&nbsp;up&nbsp;to&nbsp;the<br>
+discretion&nbsp;of&nbsp;those&nbsp;handling&nbsp;the&nbsp;incident.<br>
+&nbsp;<br>
+The&nbsp;<a href="#HistoryItem">HistoryItem</a>&nbsp;class&nbsp;is&nbsp;an&nbsp;entry&nbsp;in&nbsp;the&nbsp;History&nbsp;log<br>
+that&nbsp;documents&nbsp;a&nbsp;particular&nbsp;action&nbsp;or&nbsp;event&nbsp;that&nbsp;occurred&nbsp;in&nbsp;the<br>
+course&nbsp;of&nbsp;handling&nbsp;the&nbsp;incident.&nbsp;&nbsp;The&nbsp;details&nbsp;of&nbsp;the&nbsp;entry&nbsp;are&nbsp;a<br>
+free-form&nbsp;description,&nbsp;but&nbsp;each&nbsp;can&nbsp;be&nbsp;categorized&nbsp;with&nbsp;the&nbsp;type<br>
+attribute.<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;action:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;additional_data:&nbsp;<a href="#AdditionalData">AdditionalData</a><br>
+-&nbsp;datetime:&nbsp;str<br>
+-&nbsp;description:&nbsp;list&nbsp;of&nbsp;str<br>
+-&nbsp;ext_action:&nbsp;str<br>
+-&nbsp;restriction:&nbsp;enum&nbsp;of&nbsp;str<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="iodeflib.html#HistoryItem">HistoryItem</a></dd>
+<dd><a href="iodeflib.html#_XMLMapper">_XMLMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="HistoryItem-__init__"><strong>__init__</strong></a>(self, action<font color="#909090">=None</font>, additional_data<font color="#909090">=None</font>, datetime<font color="#909090">=None</font>, descriptions<font color="#909090">=None</font>, ext_action<font color="#909090">=None</font>, restriction<font color="#909090">=None</font>, from_xml<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="HistoryItem-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="HistoryItem-from_xml"><strong>from_xml</strong></a>(self, xml)</dt></dl>
+
+<dl><dt><a name="HistoryItem-to_xml"><strong>to_xml</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>AdditionalDataClass</strong> = &lt;class 'iodeflib.AdditionalData'&gt;<dd><tt>class&nbsp;storing&nbsp;additional&nbsp;custom&nbsp;data<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;data:&nbsp;str<br>
+-&nbsp;dtype:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;ext_dtype:&nbsp;str<br>
+-&nbsp;formatid:&nbsp;str<br>
+-&nbsp;meaning:&nbsp;str<br>
+-&nbsp;restriction:&nbsp;enum&nbsp;of&nbsp;str</tt></dl>
+
+<hr>
+Data descriptors inherited from <a href="iodeflib.html#_XMLMapper">_XMLMapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="IODEF_Document">class <strong>IODEF_Document</strong></a>(<a href="iodeflib.html#_XMLMapper">_XMLMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>IODEF&nbsp;Document&nbsp;class<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;lang:&nbsp;language,&nbsp;such&nbsp;as&nbsp;'en'<br>
+-&nbsp;version:&nbsp;version,&nbsp;such&nbsp;as&nbsp;'1.00'<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="iodeflib.html#IODEF_Document">IODEF_Document</a></dd>
+<dd><a href="iodeflib.html#_XMLMapper">_XMLMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="IODEF_Document-__init__"><strong>__init__</strong></a>(self, lang<font color="#909090">='en'</font>, version<font color="#909090">='1.00'</font>, incidents<font color="#909090">=None</font>, from_xml<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="IODEF_Document-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="IODEF_Document-from_xml"><strong>from_xml</strong></a>(self, xml_str)</dt></dl>
+
+<dl><dt><a name="IODEF_Document-to_xml"><strong>to_xml</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="IODEF_Document-to_xml_str"><strong>to_xml_str</strong></a>(self, pretty_print<font color="#909090">=False</font>)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>IncidentClass</strong> = &lt;class 'iodeflib.Incident'&gt;<dd><tt><a href="#Incident">Incident</a>&nbsp;class<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;lang:&nbsp;language,&nbsp;such&nbsp;as&nbsp;'en'<br>
+-&nbsp;purpose:&nbsp;purpose&nbsp;of&nbsp;report,&nbsp;such&nbsp;as&nbsp;'reporting'<br>
+-&nbsp;id:&nbsp;unique&nbsp;identifier&nbsp;of&nbsp;the&nbsp;report<br>
+-&nbsp;id_name:&nbsp;name&nbsp;of&nbsp;originator&nbsp;of&nbsp;the&nbsp;report,&nbsp;or&nbsp;namespace&nbsp;where&nbsp;id&nbsp;is&nbsp;unique</tt></dl>
+
+<hr>
+Data descriptors inherited from <a href="iodeflib.html#_XMLMapper">_XMLMapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Impact">class <strong>Impact</strong></a>(<a href="iodeflib.html#_XMLMapper">_XMLMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>class&nbsp;storing&nbsp;the&nbsp;impact&nbsp;assessment&nbsp;of&nbsp;an&nbsp;incident<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;description:&nbsp;str<br>
+-&nbsp;lang:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;severity:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;completion:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;type:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;ext_type:&nbsp;str<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="iodeflib.html#Impact">Impact</a></dd>
+<dd><a href="iodeflib.html#_XMLMapper">_XMLMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Impact-__init__"><strong>__init__</strong></a>(self, description<font color="#909090">=None</font>, lang<font color="#909090">=None</font>, severity<font color="#909090">=None</font>, completion<font color="#909090">=None</font>, type<font color="#909090">=None</font>, ext_type<font color="#909090">=None</font>, from_xml<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Impact-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Impact-from_xml"><strong>from_xml</strong></a>(self, xml)</dt></dl>
+
+<dl><dt><a name="Impact-to_xml"><strong>to_xml</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="iodeflib.html#_XMLMapper">_XMLMapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Incident">class <strong>Incident</strong></a>(<a href="iodeflib.html#_XMLMapper">_XMLMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Incident">Incident</a>&nbsp;class<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;lang:&nbsp;language,&nbsp;such&nbsp;as&nbsp;'en'<br>
+-&nbsp;purpose:&nbsp;purpose&nbsp;of&nbsp;report,&nbsp;such&nbsp;as&nbsp;'reporting'<br>
+-&nbsp;id:&nbsp;unique&nbsp;identifier&nbsp;of&nbsp;the&nbsp;report<br>
+-&nbsp;id_name:&nbsp;name&nbsp;of&nbsp;originator&nbsp;of&nbsp;the&nbsp;report,&nbsp;or&nbsp;namespace&nbsp;where&nbsp;id&nbsp;is&nbsp;unique<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="iodeflib.html#Incident">Incident</a></dd>
+<dd><a href="iodeflib.html#_XMLMapper">_XMLMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Incident-__init__"><strong>__init__</strong></a>(self, lang<font color="#909090">='en'</font>, purpose<font color="#909090">='reporting'</font>, id<font color="#909090">=None</font>, id_name<font color="#909090">=None</font>, report_time<font color="#909090">=None</font>, detect_time<font color="#909090">=None</font>, start_time<font color="#909090">=None</font>, end_time<font color="#909090">=None</font>, descriptions<font color="#909090">=None</font>, restriction<font color="#909090">=None</font>, ext_purpose<font color="#909090">=None</font>, assessments<font color="#909090">=None</font>, additional_data<font color="#909090">=None</font>, history<font color="#909090">=None</font>, history_restriction<font color="#909090">=None</font>, event_data<font color="#909090">=None</font>, from_xml<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Incident-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Incident-add_impact"><strong>add_impact</strong></a>(self, description<font color="#909090">=None</font>, lang<font color="#909090">=None</font>, severity<font color="#909090">=None</font>, completion<font color="#909090">=None</font>, type<font color="#909090">=None</font>, ext_type<font color="#909090">=None</font>, occurence<font color="#909090">=None</font>, restriction<font color="#909090">=None</font>)</dt><dd><tt>helper&nbsp;method&nbsp;to&nbsp;add&nbsp;a&nbsp;new&nbsp;<a href="#Assessment">Assessment</a>&nbsp;and&nbsp;<a href="#Impact">Impact</a>&nbsp;object<br>
+(does&nbsp;not&nbsp;check&nbsp;if&nbsp;existing&nbsp;<a href="#Assessment">Assessment</a>/<a href="#Impact">Impact</a>&nbsp;objects&nbsp;are&nbsp;present)</tt></dd></dl>
+
+<dl><dt><a name="Incident-add_system"><strong>add_system</strong></a>(self, category<font color="#909090">='source'</font>, name<font color="#909090">=None</font>, address<font color="#909090">=None</font>, location<font color="#909090">=None</font>, description<font color="#909090">=None</font>, event_data<font color="#909090">=None</font>, flow<font color="#909090">=None</font>)</dt><dd><tt>Add&nbsp;a&nbsp;<a href="#System">System</a>&nbsp;object&nbsp;to&nbsp;the&nbsp;incident,&nbsp;such&nbsp;as&nbsp;a&nbsp;source&nbsp;or&nbsp;a&nbsp;target&nbsp;of&nbsp;the<br>
+incident.<br>
+If&nbsp;event_data&nbsp;or&nbsp;flow&nbsp;is&nbsp;provided,&nbsp;the&nbsp;corresponding&nbsp;object&nbsp;is&nbsp;used&nbsp;as<br>
+parent,&nbsp;else&nbsp;the&nbsp;first&nbsp;<a href="#EventData">EventData</a>&nbsp;or&nbsp;<a href="#Flow">Flow</a>&nbsp;object&nbsp;is&nbsp;used,&nbsp;or&nbsp;created&nbsp;if<br>
+not&nbsp;present.<br>
+&nbsp;<br>
+-&nbsp;category:&nbsp;str,&nbsp;'source'&nbsp;or&nbsp;'target'<br>
+-&nbsp;name:&nbsp;str,&nbsp;hostname<br>
+-&nbsp;address:&nbsp;str&nbsp;(IP&nbsp;address)&nbsp;or&nbsp;list&nbsp;of&nbsp;str<br>
+-&nbsp;location:&nbsp;str<br>
+-&nbsp;description:&nbsp;str<br>
+-&nbsp;event_data:&nbsp;<a href="#EventData">EventData</a>&nbsp;or&nbsp;None<br>
+-&nbsp;flow:&nbsp;<a href="#Flow">Flow</a>&nbsp;or&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="Incident-from_xml"><strong>from_xml</strong></a>(self, xml)</dt></dl>
+
+<dl><dt><a name="Incident-get_first_impact"><strong>get_first_impact</strong></a>(self)</dt><dd><tt>helper&nbsp;method&nbsp;to&nbsp;get&nbsp;the&nbsp;first&nbsp;<a href="#Impact">Impact</a>&nbsp;object&nbsp;from&nbsp;the&nbsp;<a href="#Assessment">Assessment</a>&nbsp;objects</tt></dd></dl>
+
+<dl><dt><a name="Incident-get_sources"><strong>get_sources</strong></a>(self)</dt><dd><tt>return&nbsp;list&nbsp;of&nbsp;systems&nbsp;with&nbsp;category='source',&nbsp;in&nbsp;all&nbsp;event_data/flows</tt></dd></dl>
+
+<dl><dt><a name="Incident-get_targets"><strong>get_targets</strong></a>(self)</dt><dd><tt>return&nbsp;list&nbsp;of&nbsp;systems&nbsp;with&nbsp;category='target',&nbsp;in&nbsp;all&nbsp;event_data/flows</tt></dd></dl>
+
+<dl><dt><a name="Incident-to_xml"><strong>to_xml</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>AdditionalDataClass</strong> = &lt;class 'iodeflib.AdditionalData'&gt;<dd><tt>class&nbsp;storing&nbsp;additional&nbsp;custom&nbsp;data<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;data:&nbsp;str<br>
+-&nbsp;dtype:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;ext_dtype:&nbsp;str<br>
+-&nbsp;formatid:&nbsp;str<br>
+-&nbsp;meaning:&nbsp;str<br>
+-&nbsp;restriction:&nbsp;enum&nbsp;of&nbsp;str</tt></dl>
+
+<dl><dt><strong>AssessmentClass</strong> = &lt;class 'iodeflib.Assessment'&gt;<dd><tt>class&nbsp;storing&nbsp;the&nbsp;assessment&nbsp;of&nbsp;an&nbsp;incident<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;occurence:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;restriction:&nbsp;enum&nbsp;of&nbsp;str</tt></dl>
+
+<dl><dt><strong>EventDataClass</strong> = &lt;class 'iodeflib.EventData'&gt;<dd><tt>The&nbsp;<a href="#EventData">EventData</a>&nbsp;class&nbsp;describes&nbsp;a&nbsp;particular&nbsp;event&nbsp;of&nbsp;the&nbsp;incident&nbsp;for<br>
+a&nbsp;given&nbsp;set&nbsp;of&nbsp;hosts&nbsp;or&nbsp;networks.&nbsp;&nbsp;This&nbsp;description&nbsp;includes&nbsp;the<br>
+systems&nbsp;from&nbsp;which&nbsp;the&nbsp;activity&nbsp;originated&nbsp;and&nbsp;those&nbsp;targeted,&nbsp;an<br>
+assessment&nbsp;of&nbsp;the&nbsp;techniques&nbsp;used&nbsp;by&nbsp;the&nbsp;intruder,&nbsp;the&nbsp;impact&nbsp;of&nbsp;the<br>
+activity&nbsp;on&nbsp;the&nbsp;organization,&nbsp;and&nbsp;any&nbsp;forensic&nbsp;evidence&nbsp;discovered.<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;description:&nbsp;list&nbsp;of&nbsp;str<br>
+-&nbsp;start_time:&nbsp;str<br>
+-&nbsp;detect_time:&nbsp;str<br>
+-&nbsp;end_time:&nbsp;str<br>
+-&nbsp;restriction:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;additional_data:&nbsp;list&nbsp;of&nbsp;<a href="#AdditionalData">AdditionalData</a>&nbsp;objects<br>
+-&nbsp;flows:&nbsp;list&nbsp;of&nbsp;<a href="#Flow">Flow</a>&nbsp;objects</tt></dl>
+
+<dl><dt><strong>HistoryItemClass</strong> = &lt;class 'iodeflib.HistoryItem'&gt;<dd><tt>The&nbsp;History&nbsp;class&nbsp;is&nbsp;a&nbsp;log&nbsp;of&nbsp;the&nbsp;significant&nbsp;events&nbsp;or&nbsp;actions<br>
+performed&nbsp;by&nbsp;the&nbsp;involved&nbsp;parties&nbsp;during&nbsp;the&nbsp;course&nbsp;of&nbsp;handling&nbsp;the<br>
+incident.<br>
+&nbsp;<br>
+The&nbsp;level&nbsp;of&nbsp;detail&nbsp;maintained&nbsp;in&nbsp;this&nbsp;log&nbsp;is&nbsp;left&nbsp;up&nbsp;to&nbsp;the<br>
+discretion&nbsp;of&nbsp;those&nbsp;handling&nbsp;the&nbsp;incident.<br>
+&nbsp;<br>
+The&nbsp;<a href="#HistoryItem">HistoryItem</a>&nbsp;class&nbsp;is&nbsp;an&nbsp;entry&nbsp;in&nbsp;the&nbsp;History&nbsp;log<br>
+that&nbsp;documents&nbsp;a&nbsp;particular&nbsp;action&nbsp;or&nbsp;event&nbsp;that&nbsp;occurred&nbsp;in&nbsp;the<br>
+course&nbsp;of&nbsp;handling&nbsp;the&nbsp;incident.&nbsp;&nbsp;The&nbsp;details&nbsp;of&nbsp;the&nbsp;entry&nbsp;are&nbsp;a<br>
+free-form&nbsp;description,&nbsp;but&nbsp;each&nbsp;can&nbsp;be&nbsp;categorized&nbsp;with&nbsp;the&nbsp;type<br>
+attribute.<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;action:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;additional_data:&nbsp;<a href="#AdditionalData">AdditionalData</a><br>
+-&nbsp;datetime:&nbsp;str<br>
+-&nbsp;description:&nbsp;list&nbsp;of&nbsp;str<br>
+-&nbsp;ext_action:&nbsp;str<br>
+-&nbsp;restriction:&nbsp;enum&nbsp;of&nbsp;str</tt></dl>
+
+<hr>
+Data descriptors inherited from <a href="iodeflib.html#_XMLMapper">_XMLMapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="System">class <strong>System</strong></a>(<a href="iodeflib.html#_XMLMapper">_XMLMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;<a href="#System">System</a>&nbsp;class&nbsp;describes&nbsp;a&nbsp;system&nbsp;or&nbsp;network&nbsp;involved&nbsp;in&nbsp;an&nbsp;event.<br>
+The&nbsp;systems&nbsp;or&nbsp;networks&nbsp;represented&nbsp;by&nbsp;this&nbsp;class&nbsp;are&nbsp;categorized<br>
+according&nbsp;to&nbsp;the&nbsp;role&nbsp;they&nbsp;played&nbsp;in&nbsp;the&nbsp;incident&nbsp;through&nbsp;the<br>
+category&nbsp;attribute.&nbsp;&nbsp;The&nbsp;value&nbsp;of&nbsp;this&nbsp;category&nbsp;attribute&nbsp;dictates<br>
+the&nbsp;semantics&nbsp;of&nbsp;the&nbsp;aggregated&nbsp;classes&nbsp;in&nbsp;the&nbsp;<a href="#System">System</a>&nbsp;class.&nbsp;&nbsp;If&nbsp;the<br>
+category&nbsp;attribute&nbsp;has&nbsp;a&nbsp;value&nbsp;of&nbsp;"source",&nbsp;then&nbsp;the&nbsp;aggregated<br>
+classes&nbsp;denote&nbsp;the&nbsp;machine&nbsp;and&nbsp;service&nbsp;from&nbsp;which&nbsp;the&nbsp;activity&nbsp;is<br>
+originating.&nbsp;&nbsp;With&nbsp;a&nbsp;category&nbsp;attribute&nbsp;value&nbsp;of&nbsp;"target"&nbsp;or<br>
+"intermediary",&nbsp;then&nbsp;the&nbsp;machine&nbsp;or&nbsp;service&nbsp;is&nbsp;the&nbsp;one&nbsp;targeted&nbsp;in<br>
+the&nbsp;activity.&nbsp;&nbsp;A&nbsp;value&nbsp;of&nbsp;"sensor"&nbsp;dictates&nbsp;that&nbsp;this&nbsp;<a href="#System">System</a>&nbsp;was&nbsp;part<br>
+of&nbsp;an&nbsp;instrumentation&nbsp;to&nbsp;monitor&nbsp;the&nbsp;network.<br>
+&nbsp;<br>
+This&nbsp;iodeflib.<a href="#System">System</a>&nbsp;class&nbsp;also&nbsp;contains&nbsp;the&nbsp;IODEF&nbsp;Node&nbsp;class,&nbsp;because&nbsp;there<br>
+is&nbsp;a&nbsp;one-to-one&nbsp;mapping:<br>
+The&nbsp;Node&nbsp;class&nbsp;names&nbsp;a&nbsp;system&nbsp;(e.g.,&nbsp;PC,&nbsp;router)&nbsp;or&nbsp;network.<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;category:&nbsp;enum&nbsp;of&nbsp;str,&nbsp;source/target/intermediary/sensor<br>
+-&nbsp;ext_category:&nbsp;str<br>
+-&nbsp;descriptions:&nbsp;list&nbsp;of&nbsp;str<br>
+-&nbsp;interface:&nbsp;str<br>
+-&nbsp;spoofed:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;additional_data:&nbsp;<a href="#AdditionalData">AdditionalData</a><br>
+-&nbsp;restriction:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;node_datetime:&nbsp;str<br>
+-&nbsp;node_location:&nbsp;str<br>
+-&nbsp;node_names:&nbsp;list&nbsp;of&nbsp;str<br>
+-&nbsp;node_addresses:&nbsp;list&nbsp;of&nbsp;<a href="#Address">Address</a>&nbsp;objects<br>
+-&nbsp;node_roles:&nbsp;list&nbsp;of&nbsp;NodeRole&nbsp;objects<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="iodeflib.html#System">System</a></dd>
+<dd><a href="iodeflib.html#_XMLMapper">_XMLMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="System-__init__"><strong>__init__</strong></a>(self, category<font color="#909090">=None</font>, ext_category<font color="#909090">=None</font>, descriptions<font color="#909090">=None</font>, interface<font color="#909090">=None</font>, spoofed<font color="#909090">=None</font>, restriction<font color="#909090">=None</font>, additional_data<font color="#909090">=None</font>, node_datetime<font color="#909090">=None</font>, node_location<font color="#909090">=None</font>, node_names<font color="#909090">=None</font>, node_addresses<font color="#909090">=None</font>, from_xml<font color="#909090">=None</font>)</dt><dd><tt>constructor&nbsp;for&nbsp;<a href="#System">System</a>&nbsp;class<br>
+-&nbsp;see&nbsp;class&nbsp;attributes<br>
+-&nbsp;from_xml:&nbsp;Element&nbsp;object&nbsp;(XML)&nbsp;to&nbsp;be&nbsp;parsed</tt></dd></dl>
+
+<dl><dt><a name="System-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="System-from_xml"><strong>from_xml</strong></a>(self, xml)</dt></dl>
+
+<dl><dt><a name="System-get_addresses"><strong>get_addresses</strong></a>(self)</dt><dd><tt>return&nbsp;list&nbsp;of&nbsp;addresses&nbsp;for&nbsp;this&nbsp;system/node&nbsp;(e.g.&nbsp;all&nbsp;IP&nbsp;addresses)<br>
+The&nbsp;result&nbsp;is&nbsp;a&nbsp;list&nbsp;of&nbsp;strings&nbsp;containing&nbsp;the&nbsp;address&nbsp;attribute&nbsp;of<br>
+all&nbsp;the&nbsp;<a href="#Address">Address</a>&nbsp;objects&nbsp;for&nbsp;this&nbsp;<a href="#System">System</a>/Node.</tt></dd></dl>
+
+<dl><dt><a name="System-to_xml"><strong>to_xml</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>AdditionalDataClass</strong> = &lt;class 'iodeflib.AdditionalData'&gt;<dd><tt>class&nbsp;storing&nbsp;additional&nbsp;custom&nbsp;data<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;data:&nbsp;str<br>
+-&nbsp;dtype:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;ext_dtype:&nbsp;str<br>
+-&nbsp;formatid:&nbsp;str<br>
+-&nbsp;meaning:&nbsp;str<br>
+-&nbsp;restriction:&nbsp;enum&nbsp;of&nbsp;str</tt></dl>
+
+<dl><dt><strong>AddressClass</strong> = &lt;class 'iodeflib.Address'&gt;<dd><tt>The&nbsp;<a href="#Address">Address</a>&nbsp;class&nbsp;represents&nbsp;a&nbsp;hardware&nbsp;(layer-2),&nbsp;network&nbsp;(layer-3),<br>
+or&nbsp;application&nbsp;(layer-7)&nbsp;address.<br>
+&nbsp;<br>
+attributes:<br>
+-&nbsp;address:&nbsp;str<br>
+-&nbsp;category:&nbsp;enum&nbsp;of&nbsp;str<br>
+-&nbsp;ext_category:&nbsp;str<br>
+-&nbsp;vlan_name:&nbsp;str<br>
+-&nbsp;vlan_num:&nbsp;str&nbsp;(int&nbsp;in&nbsp;<a href="http://www.rfc-editor.org/rfc/rfc5070.txt">RFC&nbsp;5070</a>)</tt></dl>
+
+<hr>
+Data descriptors inherited from <a href="iodeflib.html#_XMLMapper">_XMLMapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-get_logger"><strong>get_logger</strong></a>(name, level<font color="#909090">=10</font>)</dt><dd><tt>Create&nbsp;a&nbsp;logger&nbsp;object&nbsp;which&nbsp;logs&nbsp;up&nbsp;to&nbsp;DEBUG&nbsp;on&nbsp;the&nbsp;console&nbsp;only.<br>
+The&nbsp;goal&nbsp;is&nbsp;not&nbsp;to&nbsp;change&nbsp;settings&nbsp;of&nbsp;the&nbsp;root&nbsp;logger,&nbsp;to&nbsp;avoid&nbsp;messing<br>
+with&nbsp;the&nbsp;main&nbsp;application.<br>
+If&nbsp;a&nbsp;logger&nbsp;exists&nbsp;with&nbsp;same&nbsp;name,&nbsp;reuse&nbsp;it.&nbsp;(Else&nbsp;it&nbsp;would&nbsp;have&nbsp;duplicate<br>
+handlers&nbsp;and&nbsp;messages&nbsp;would&nbsp;be&nbsp;doubled.)</tt></dd></dl>
+ <dl><dt><a name="-parse"><strong>parse</strong></a>(xml_string)</dt><dd><tt>Parse&nbsp;an&nbsp;XML&nbsp;string&nbsp;containing&nbsp;an&nbsp;IODEF&nbsp;incident&nbsp;report<br>
+return&nbsp;an&nbsp;<a href="#IODEF_Document">IODEF_Document</a>&nbsp;object</tt></dd></dl>
+ <dl><dt><a name="-parse_file"><strong>parse_file</strong></a>(filename)</dt><dd><tt>Parse&nbsp;an&nbsp;XML&nbsp;file&nbsp;containing&nbsp;an&nbsp;IODEF&nbsp;incident&nbsp;report<br>
+return&nbsp;an&nbsp;<a href="#IODEF_Document">IODEF_Document</a>&nbsp;object</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>EMPTY_IODEF</strong> = '&lt;IODEF-Document version="1.00" lang="en"<font color="#c040c0">\n</font>  xmlns...ocation="urn:ietf:params:xml:schema:iodef-1.0"/&gt;<font color="#c040c0">\n</font>'<br>
+<strong>LXML</strong> = True<br>
+<strong>NS</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}'<br>
+<strong>TAG_AdditionalData</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}AdditionalData'<br>
+<strong>TAG_Address</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}Address'<br>
+<strong>TAG_Assessment</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}Assessment'<br>
+<strong>TAG_DateTime</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}DateTime'<br>
+<strong>TAG_Description</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}Description'<br>
+<strong>TAG_DetectTime</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}DetectTime'<br>
+<strong>TAG_EndTime</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}EndTime'<br>
+<strong>TAG_EventData</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}EventData'<br>
+<strong>TAG_Flow</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}Flow'<br>
+<strong>TAG_History</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}History'<br>
+<strong>TAG_HistoryItem</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}HistoryItem'<br>
+<strong>TAG_Impact</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}Impact'<br>
+<strong>TAG_Incident</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}Incident'<br>
+<strong>TAG_IncidentID</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}IncidentID'<br>
+<strong>TAG_Node</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}Node'<br>
+<strong>TAG_NodeName</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}NodeName'<br>
+<strong>TAG_ReportTime</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}ReportTime'<br>
+<strong>TAG_StartTime</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}StartTime'<br>
+<strong>TAG_System</strong> = '{urn:ietf:params:xml:ns:iodef-1.0}System'<br>
+<strong>__version__</strong> = '0.07'<br>
+<strong>log</strong> = &lt;logging.Logger instance&gt;</td></tr></table>
+</body></html>

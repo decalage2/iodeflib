@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This example demonstrates a report for a very
+     old worm (Code Red) -->
+<IODEF-Document version="1.00" lang="en"
+  xmlns="urn:ietf:params:xml:ns:iodef-1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:ietf:params:xml:schema:iodef-1.0">
+  <Incident purpose="reporting">
+    <IncidentID name="csirt.example.com">189493</IncidentID>
+    <ReportTime>2001-09-13T23:19:24+00:00</ReportTime>
+    <Description>Host sending out Code Red probes</Description>
+    <!-- An administrative privilege was attempted, but failed -->
+    <Assessment>
+      <Impact completion="failed" type="admin"/>
+    </Assessment>
+    <Contact role="creator" type="organization">
+      <ContactName>Example.com CSIRT</ContactName>
+      <RegistryHandle registry="arin">example-com</RegistryHandle>
+      <Email>contact@csirt.example.com</Email>
+    </Contact>
+    <EventData>
+      <Flow>
+        <System category="source">
+          <Node>
+            <Address category="ipv4-addr">192.0.2.200</Address>
+            <Counter type="event">57</Counter>
+          </Node>
+        </System>
+        <System category="target">
+          <Node>
+            <Address category="ipv4-net">192.0.2.16/28</Address>
+          </Node>
+          <Service ip_protocol="6">
+            <Port>80</Port>
+          </Service>
+        </System>
+      </Flow>
+      <Expectation action="block-host" />
+      <!-- <RecordItem> has an excerpt from a log -->
+      <Record>
+        <RecordData>
+          <DateTime>2001-09-13T18:11:21+02:00</DateTime>
+          <Description>Web-server logs</Description>
+          <RecordItem dtype="string">
+          192.0.2.1 - - [13/Sep/2001:18:11:21 +0200] "GET /default.ida?
+          XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+          XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+          XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+          XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+          </RecordItem>
+            <!-- Additional logs -->
+          <RecordItem dtype="url">
+             http://mylogs.example.com/logs/httpd_access</RecordItem>
+        </RecordData>
+      </Record>
+    </EventData>
+    <History>
+      <!-- Contact was previously made with the source network owner -->
+      <HistoryItem action="contact-source-site">
+        <DateTime>2001-09-14T08:19:01+00:00</DateTime>
+        <Description>Notification sent to
+                     constituency-contact@192.0.2.200</Description>
+      </HistoryItem>
+    </History>
+  </Incident>
+
+
+ <Incident purpose="reporting">
+   <IncidentID name="csirt.example.com">59334</IncidentID>
+   <ReportTime>2006-08-02T05:54:02-05:00</ReportTime>
+   <Assessment>
+     <Impact type="recon" completion="succeeded" />
+   </Assessment>
+   <Method>
+     <!-- Reference to the scanning tool "nmap" -->
+     <Reference>
+       <ReferenceName>nmap</ReferenceName>
+       <URL>http://nmap.toolsite.example.com</URL>
+     </Reference>
+   </Method>
+   <!-- Organizational contact and that for staff in that
+        organization -->
+   <Contact role="creator" type="organization">
+     <ContactName>CSIRT for example.com</ContactName>
+     <Email>contact@csirt.example.com</Email>
+     <Telephone>+1 412 555 12345</Telephone>
+     <!-- Since this <Contact> is nested, Joe Smith is part of the
+         CSIRT for example.com -->
+     <Contact role="tech" type="person" restriction="need-to-know">
+       <ContactName>Joe Smith</ContactName>
+       <Email>smith@csirt.example.com</Email>
+     </Contact>
+   </Contact>
+   <EventData>
+     <!-- Scanning activity as follows:
+       192.0.2.1:60524 >> 192.0.2.3:137
+              192.0.2.1:60526 >> 192.0.2.3:138
+              192.0.2.1:60527 >> 192.0.2.3:139
+              192.0.2.1:60531 >> 192.0.2.3:445
+     -->
+     <Flow>
+       <System category="source">
+         <Node>
+           <Address category="ipv4-addr">192.0.2.200</Address>
+         </Node>
+         <Service ip_protocol="6">
+           <Portlist>60524,60526,60527,60531</Portlist>
+         </Service>
+       </System>
+       <System category="target">
+         <Node>
+           <Address category="ipv4-addr">192.0.2.201</Address>
+         </Node>
+         <Service ip_protocol="6">
+           <Portlist>137-139,445</Portlist>
+         </Service>
+       </System>
+     </Flow>
+     <!-- Scanning activity as follows:
+           192.0.2.2 >> 192.0.2.3/28:445 -->
+     <Flow>
+       <System category="source">
+         <Node>
+           <Address category="ipv4-addr">192.0.2.240</Address>
+         </Node>
+       </System>
+       <System category="target">
+         <Node>
+           <Address category="ipv4-net">192.0.2.64/28</Address>
+         </Node>
+         <Service ip_protocol="6">
+           <Port>445</Port>
+         </Service>
+       </System>
+     </Flow>
+   </EventData>
+ </Incident>
+
+
+<Incident purpose="mitigation">
+ <IncidentID name="csirt.example.com">908711</IncidentID>
+ <ReportTime>2006-06-08T05:44:53-05:00</ReportTime>
+ <Description>Large bot-net</Description>
+ <Assessment>
+   <Impact type="dos" severity="high" completion="succeeded" />
+ </Assessment>
+ <Method>
+   <!-- References a given piece of malware, "GT Bot" -->
+   <Reference>
+     <ReferenceName>GT Bot</ReferenceName>
+   </Reference>
+   <!-- References the vulnerability used to compromise the
+        machines -->
+   <Reference>
+     <ReferenceName>CA-2003-22</ReferenceName>
+     <URL>http://www.cert.org/advisories/CA-2003-22.html</URL>
+     <Description>Root compromise via this IE vulnerability to
+                  install the GT Bot</Description>
+   </Reference>
+ </Method>
+ <!-- A member of the CSIRT that is coordinating this
+      incident -->
+ <Contact type="person" role="irt">
+   <ContactName>Joe Smith</ContactName>
+   <Email>jsmith@csirt.example.com</Email>
+ </Contact>
+ <EventData>
+   <Description>These hosts are compromised and acting as bots
+                communicating with irc.example.com.</Description>
+   <Flow>
+     <!-- bot running on 192.0.2.1 and sending DoS traffic at
+          10,000 bytes/second -->
+     <System category="source">
+       <Node>
+         <Address category="ipv4-addr">192.0.2.1</Address>
+       </Node>
+       <Counter type="byte" duration="second">10000</Counter>
+       <Description>bot</Description>
+     </System>
+     <!-- a second bot on 192.0.2.3 -->
+     <System category="source">
+       <Node>
+         <Address category="ipv4-addr">192.0.2.3</Address>
+       </Node>
+       <Counter type="byte" duration="second">250000</Counter>
+       <Description>bot</Description>
+     </System>
+     <!-- Command-and-control IRC server for these bots-->
+     <System category="intermediate">
+       <Node>
+         <NodeName>irc.example.com</NodeName>
+         <Address category="ipv4-addr">192.0.2.20</Address>
+         <DateTime>2006-06-08T01:01:03-05:00</DateTime>
+       </Node>
+       <Description>IRC server on #give-me-cmd channel</Description>
+     </System>
+   </Flow>
+   <!-- Request to take these machines offline -->
+   <Expectation action="investigate">
+     <Description>Confirm the source and take machines off-line and
+                  remediate</Description>
+   </Expectation>
+ </EventData>
+</Incident>
+
+
+  <Incident purpose="reporting" restriction="private">
+    <IncidentID name="csirt.example.com">908711</IncidentID>
+    <ReportTime>2006-08-01T00:00:00-05:00</ReportTime>
+    <Description>Watch-list of known bad IPs or networks</Description>
+    <Assessment>
+      <Impact type="admin" completion="succeeded" />
+      <Impact type="recon" completion="succeeded" />
+    </Assessment>
+    <Contact type="organization" role="creator">
+      <ContactName>CSIRT for example.com</ContactName>
+      <Email>contact@csirt.example.com</Email>
+    </Contact>
+    <!-- Separate <EventData> used to convey different <Expectation> -->
+    <EventData>
+      <Flow>
+        <System category="source">
+          <Node>
+            <Address category="ipv4-addr">192.0.2.53</Address>
+          </Node>
+          <Description>Source of numerous attacks</Description>
+        </System>
+      </Flow>
+      <!-- Expectation class indicating that sender of list would like
+           to be notified if activity from the host is seen -->
+      <Expectation action="contact-sender" />
+    </EventData>
+    <EventData>
+      <Flow>
+        <System category="source">
+          <Node>
+            <Address category="ipv4-net">192.0.2.16/28</Address>
+          </Node>
+          <Description>
+            Source of heavy scanning over past 1-month
+          </Description>
+        </System>
+      </Flow>
+      <Flow>
+        <System category="source">
+          <Node>
+            <Address category="ipv4-addr">192.0.2.241</Address>
+          </Node>
+          <Description>C2 IRC server</Description>
+        </System>
+      </Flow>
+      <!-- Expectation class recommends that these networks
+           be filtered -->
+      <Expectation action="block-host" />
+    </EventData>
+  </Incident>
+</IODEF-Document>
